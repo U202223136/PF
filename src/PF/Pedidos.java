@@ -17,10 +17,27 @@ public class Pedidos {
 
     public static void main(String[] args) {
 
-        //Menu();
-        //MovimientosStock();
-        //IngresePedido();
-        ReportePedido();
+        String ope = "";
+
+        do {
+
+            if (ope.equalsIgnoreCase("P")) {
+                ope = IngresePedido();
+
+            } else if (ope.equalsIgnoreCase("R")) {
+                ope = ReportePedido();
+
+            } else if (ope.equalsIgnoreCase("K")) {
+                ope = MovimientosStock();
+
+            } else {
+                ope = Menu();
+            }
+
+        } while (!ope.equalsIgnoreCase("S"));
+
+
+        System.out.println("Aplicacion terminada!");
     }
 
     public static String Menu() {
