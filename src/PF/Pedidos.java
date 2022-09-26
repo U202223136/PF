@@ -130,7 +130,8 @@ public class Pedidos {
         AUX_PROD_INDEX[_n] = index;
 
         Scanner scn = new Scanner(System.in);
-        System.out.print("Desea agregar nuevo producto? Si (S) o Finalizar (F): ");
+        System.out.println("Producto agregado a la lista.");
+        System.out.print("Desea agregar mas productos? Si (S) o Finalizar (F): ");
 
         return scn.next();
     }
