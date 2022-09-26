@@ -19,7 +19,8 @@ public class Pedidos {
 
         //Menu();
         //MovimientosStock();
-        IngresePedido();
+        //IngresePedido();
+        ReportePedido();
     }
 
     public static String Menu() {
@@ -156,4 +157,32 @@ public class Pedidos {
         System.out.println();
     }
 
+    public static String ReportePedido() {
+        System.out.println(title);
+        System.out.println("Reporte de pedidos!");
+        System.out.println("================================================================");
+
+        if (PEDIDOS.length > 0) {
+            for (int i = 0; i < PEDIDOS.length; i++) {
+                String _pedido = PEDIDOS[i];
+                String _detalle = DETALLES[i];
+
+                System.out.println("Nro \t|Total Item");
+                System.out.println(_pedido);
+
+                System.out.println("Item |Codigo\t|Cantidad");
+                for (String p : _detalle.split("@")) {
+                    System.out.println(p);
+                }
+
+                System.out.println();
+            }
+        } else {
+            System.out.println("Sin Registro de pedidos.");
+
+            System.out.println();
+        }
+
+        return "M";
+    }
 }
