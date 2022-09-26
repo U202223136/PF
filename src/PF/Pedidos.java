@@ -171,7 +171,7 @@ public class Pedidos {
     }
 
     public static void NotificarAlAlmacen() {
-        System.out.println("Notificando al almacen...");
+        System.out.println("Notificando al area de almacen...");
         System.out.println();
     }
 
